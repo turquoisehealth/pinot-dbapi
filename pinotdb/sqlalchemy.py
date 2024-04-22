@@ -42,7 +42,7 @@ class PinotCompiler(compiler.SQLCompiler):
         add_to_result_map=None,
         within_label_clause=False,
         within_columns_clause=False,
-        render_label_as_label=None,
+        render_label_as_label=True,
         **kw,
     ):
         return super().visit_label(
@@ -51,7 +51,7 @@ class PinotCompiler(compiler.SQLCompiler):
             within_label_clause,
             within_columns_clause,
             # Note: We force not to render labels in non-select clauses
-            render_label_as_label=None,
+            render_label_as_label=True,
             **kw,
         )
 

@@ -72,7 +72,7 @@ class PinotTypeCompiler(compiler.GenericTypeCompiler):
     visit_DATE = visit_NUMERIC
 
     def visit_CHAR(self, type_, **kwargs):
-        return "STRING"
+        return "VARCHAR"
 
     visit_NCHAR = visit_CHAR
     visit_VARCHAR = visit_CHAR
